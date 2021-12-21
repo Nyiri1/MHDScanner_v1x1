@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity_MHDScan">
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:text="@string/info_camera_acitivty"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextureView
+        android:id="@+id/texture"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView1"
+        app:layout_constraintVertical_bias="1.0" />
+    C:\Users\Robotic004\AndroidStudioProjects\MHDScanner\app\src\main\java\aaa\mhdscanner\CustomView.java
+    <aaa.mhdscanner.CustomView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@+id/texture"
+        app:layout_constraintEnd_toEndOf="@+id/texture"
+        app:layout_constraintStart_toStartOf="@+id/texture"
+        app:layout_constraintTop_toTopOf="@+id/texture" >
+
+        <com.xw.repo.BubbleSeekBar
+            android:id="@+id/bubbleSeekBar"
+            android:layout_width="match_parent"
+            android:layout_height="14dp"
+
+            app:bsb_always_show_bubble="true"
+            app:bsb_auto_adjust_section_mark="false"
+
+
+            app:bsb_bubble_text_size="10dp"
+            app:bsb_hide_bubble="false"
+
+            app:bsb_is_float_type="false"
+            app:bsb_max="2000"
+            app:bsb_min="0"
+            app:bsb_rtl="false"
+            app:bsb_second_track_color="#000000"
+            app:bsb_second_track_size="10dp"
+
+            app:bsb_section_text_color="#000000"
+            app:bsb_section_text_position="below_section_mark"
+
+            app:bsb_section_text_size="14dp"
+            app:bsb_seek_by_section="false"
+            app:bsb_seek_step_section="false"
+            app:bsb_show_progress_in_float="false"
+            app:bsb_show_section_mark="true"
+            app:bsb_show_section_text="true"
+            app:bsb_show_thumb_text="true"
+            app:bsb_thumb_color="#000000"
+            app:bsb_thumb_radius="6dp"
+
+            app:bsb_thumb_radius_on_dragging="2dp"
+
+
+            app:bsb_thumb_text_size="4dp"
+            app:bsb_touch_to_seek="true"
+
+            app:bsb_track_color="@color/colorPrimary"
+            app:bsb_track_size="7dp"
+            />
+
+    </aaa.mhdscanner.CustomView>
+
+    <TextView
+        android:id="@+id/box_Top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/back"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="@+id/texture"
+        app:layout_constraintStart_toStartOf="@+id/texture"
+        app:layout_constraintTop_toTopOf="@+id/texture" />
+
+    <TextView
+        android:id="@+id/box_Bottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/back"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/texture"
+        app:layout_constraintEnd_toEndOf="@+id/texture"
+        app:layout_constraintStart_toStartOf="@+id/texture" />
+
+    <TextView
+        android:id="@+id/box_Left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/back"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/texture"
+        app:layout_constraintStart_toStartOf="@+id/texture"
+        app:layout_constraintTop_toTopOf="@+id/texture" />
+
+    <TextView
+        android:id="@+id/box_Right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/back"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/texture"
+        app:layout_constraintEnd_toEndOf="@+id/texture"
+        app:layout_constraintTop_toTopOf="@+id/texture" />
+
+    <Button
+        android:id="@+id/take_picture"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="16dp"
+        app:icon="@android:drawable/ic_menu_camera"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/start_stop_video"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ToggleButton
+        android:id="@+id/start_stop_video"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="56dp"
+        android:layout_marginBottom="16dp"
+        android:layout_weight="1"
+        android:text="GO"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+
+    <TextView
+        android:id="@+id/textView_ShowCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="16dp"
+        android:layout_weight="1"
+        android:text="Placeholder"
+        android:textColor="#f7f702"
+        app:layout_constraintBottom_toTopOf="@+id/start_stop_video"
+        app:layout_constraintEnd_toEndOf="@+id/start_stop_video"
+        app:layout_constraintStart_toStartOf="@+id/start_stop_video"
+        app:layout_constraintTop_toTopOf="@+id/textView1"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/textView_avgSpeed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="16dp"
+        android:layout_weight="1"
+        android:text="Placeholder"
+        android:textColor="#f7f702"
+        app:layout_constraintBottom_toTopOf="@+id/textView_ShowCount"
+        app:layout_constraintEnd_toEndOf="@+id/start_stop_video"
+        app:layout_constraintStart_toStartOf="@+id/start_stop_video"
+        app:layout_constraintTop_toTopOf="@+id/textView1"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <Button
+        android:id="@+id/button_to_barcode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="8dp"
+        android:text="@string/barcode"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Switch
+        android:id="@+id/sw_HQ"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="16dp"
+        android:layout_weight="1"
+        android:switchTextAppearance="@style/SwitchTextAppearance"
+        android:text="Switch"
+        android:thumbTint="#FFFFFF"
+        android:trackTint="#FFFFFF"
+        app:layout_constraintBottom_toTopOf="@+id/take_picture"
+        app:layout_constraintEnd_toEndOf="@+id/take_picture"
+        app:layout_constraintStart_toStartOf="@+id/take_picture"
+        app:layout_constraintTop_toTopOf="@+id/textView1"
+        app:layout_constraintVertical_bias="1.0" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
